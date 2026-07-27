@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hedgemony User Guide</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 32px 20px 72px;
+    line-height: 1.6; color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #121212; }
+    a { color: #7cc48a; }
+    figure img { border-color: #333; }
+    .tip { background: rgba(124, 196, 138, 0.12); }
+  }
+  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
+  h2 { font-size: 1.3em; margin-top: 2.2em; border-bottom: 1px solid rgba(128,128,128,0.25); padding-bottom: 6px; }
+  h3 { font-size: 1.05em; margin-top: 1.4em; }
+  a { color: #2e7d32; }
+  nav.top { margin-bottom: 2em; font-size: 0.95em; }
+  .section { display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap; }
+  .section .text { flex: 1 1 340px; }
+  figure { margin: 1em 0; flex: 0 0 auto; }
+  figure img {
+    width: 260px; max-width: 100%; border: 1px solid #ddd;
+    border-radius: 18px; display: block;
+  }
+  figure.wide img { width: 420px; border-radius: 8px; }
+  figcaption { font-size: 0.85em; color: #777; margin-top: 6px; max-width: 260px; }
+  .tip {
+    background: rgba(46, 125, 50, 0.08); border-radius: 10px;
+    padding: 12px 16px; margin: 1em 0; font-size: 0.95em;
+  }
+  code { background: rgba(128,128,128,0.15); padding: 1px 6px; border-radius: 5px; font-size: 0.9em; }
+  ul { padding-left: 1.2em; }
+  li { margin: 0.35em 0; }
+</style>
+</head>
+<body>
+<nav class="top"><a href="index.html">Hedgemony</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></nav>
+
+<h1>Hedgemony™ User Guide</h1>
+<p>Hedgemony runs a lawn care business from your pocket: your schedule, your clients,
+and what you're owed. Everything works with no signal, so a dead spot at the back of a
+neighborhood never stops you. This guide walks the app the way you'd walk a work day.</p>
+
+<p class="tip">Your clients never see or install anything. Texts come from your own phone
+number, and invoices arrive as normal PDFs. To them, it's just you, but organized.</p>
+
+<h2 id="clients">1. Get your clients in</h2>
+<div class="section">
+<div class="text">
+<p>Open the <strong>Clients</strong> tab and tap the green <strong>+</strong>. You can add
+one client by hand, with their address and schedule on a single screen, or import your
+whole list at once.</p>
+<ul>
+  <li><strong>From Contacts:</strong> pick the people who are clients. Names, phones, and
+  addresses come across.</li>
+  <li><strong>From a spreadsheet:</strong> a CSV exported from Excel, Numbers, or Google
+  Sheets. Only a name column is required, and column order doesn't matter. You see a
+  preview of exactly what will be created, with any problems flagged, before anything is
+  saved. There's a template in the import screen if you'd rather start from that.</li>
+</ul>
+<p>Give a client a schedule (weekly, every 2 weeks, or monthly) and the next ten weeks
+fill in by themselves. Change the schedule later and the app shows you exactly which
+visits will move before you confirm.</p>
+</div>
+<figure><img src="guide/clients.png" alt="Clients tab"><figcaption>Search, filters, and
+every client's cadence at a glance.</figcaption></figure>
+</div>
+
+<h2 id="today">2. Run your day</h2>
+<div class="section">
+<div class="text">
+<p>The <strong>Today</strong> tab is the screen the app opens to. The green header answers
+the only question that matters: how's the day going. Stops left, money earned, money still
+out there.</p>
+<ul>
+  <li><strong>Go:</strong> tap the little green arrow next to any address to open Maps and
+  drive there.</li>
+  <li><strong>Done:</strong> swipe a card right to complete it at the plan price, one
+  motion, no typing.</li>
+  <li><strong>Skip or move:</strong> swipe left.</li>
+  <li><strong>Reorder:</strong> press and hold a card, then drag it to where it belongs in
+  your route. The order sticks.</li>
+  <li><strong>Left over from a rained-out day?</strong> It shows up on top in orange with a
+  <strong>Do it today</strong> button, so nothing silently falls through.</li>
+</ul>
+<p>Gate codes and dog warnings sit right on the card, because that's when you need
+them.</p>
+</div>
+<figure><img src="guide/today.png" alt="Today tab"><figcaption>Two done, a timer running,
+and one stop left over from Friday.</figcaption></figure>
+</div>
+
+<h2 id="complete">3. Complete a job</h2>
+<div class="section">
+<div class="text">
+<p>Tap a card to open the job. Everything is prefilled from the client's plan, so the
+common case is two taps: open, then <strong>Done</strong>.</p>
+<ul>
+  <li><strong>Upcharges:</strong> tap a chip (Weed eating, Bushes, Beds, Edging, Cleanup)
+  to add a line, then type the price. <strong>+ Add</strong> makes a custom line.</li>
+  <li><strong>Timer:</strong> tap Start when you get out of the truck. It keeps counting
+  with the phone in your pocket, and Stop then Resume keeps the total if you take a break
+  mid-job. Or just type the minutes. Over time this builds your average per yard, which is
+  how you'll know which clients are underpriced.</li>
+  <li><strong>Notes:</strong> anything worth remembering ("gate was locked, skipped the
+  back").</li>
+</ul>
+<p>The big button at the bottom shows the total it's about to charge. That tap is what
+puts the money on the client's balance.</p>
+<p class="tip">Made a mistake? Open the completed job and use <strong>Undo
+completion</strong>. The charge comes off the books and the stop goes back on today's
+list.</p>
+</div>
+<figure><img src="guide/complete.png" alt="Complete job screen"><figcaption>Prefilled
+price, upcharge chips, timer, and the total on the button.</figcaption></figure>
+</div>
+
+<h2 id="schedule">4. The week</h2>
+<div class="section">
+<div class="text">
+<p>The <strong>Schedule</strong> tab shows the week as day cards with each day's stop
+count and dollar total. Arrows move between weeks.</p>
+<ul>
+  <li><strong>Move a stop:</strong> drag it to another day, or drop it onto another stop
+  to land in that exact position. A green bar shows where it will land. Moving one visit
+  never shifts the client's rotation, so a biweekly client stays biweekly.</li>
+  <li><strong>Rained out:</strong> open the day and use <strong>Move all</strong> to push
+  every remaining stop to another day at once.</li>
+  <li><strong>One-off work:</strong> cleanups, mulch jobs, anything outside the regular
+  rotation, from the menu in the corner.</li>
+  <li><strong>Tap a stop</strong> in a day to open that client's profile.</li>
+</ul>
+</div>
+<figure><img src="guide/schedule.png" alt="Schedule tab"><figcaption>The week at a
+glance, with today outlined.</figcaption></figure>
+</div>
+
+<h2 id="texting">5. Text your clients</h2>
+<div class="section">
+<div class="text">
+<p>The evening before a work day, open the Schedule menu and tap <strong>Text tomorrow's
+clients</strong>. Hedgemony queues tomorrow's stops with a message already written for
+each one, using your template. Tap Send on each and it opens in Messages addressed to
+that one client. You send it, from your number, so it reads like you and not a robot.</p>
+<p>The wording lives in <strong>Settings → Message templates</strong>. Tokens like
+<code>{{name}}</code> and <code>{{day}}</code> fill in automatically per client. The same
+system writes balance reminder texts from the Money tab.</p>
+<p>Nothing ever sends by itself. No timers, no automation, no surprise messages to your
+clients.</p>
+</div>
+<figure><img src="guide/reminders.png" alt="Reminder run"><figcaption>Tomorrow's queue,
+one tap per client. (On your phone the buttons read Send; this simulator can't
+text.)</figcaption></figure>
+</div>
+
+<h2 id="money">6. Get paid</h2>
+<div class="section">
+<div class="text">
+<p>The <strong>Money</strong> tab keeps the score: the total owed to you, split by how old
+it is. Current, 30, 60, 90 plus. Each client who owes shows how long they've owed and
+gives you three moves:</p>
+<ul>
+  <li><strong>Text reminder:</strong> a friendly balance text, written for you, sent by
+  you.</li>
+  <li><strong>Invoice:</strong> pick which visits go on it, and the app makes a clean PDF
+  with your logo. Send it by text, email, or AirDrop.</li>
+  <li><strong>Record payment:</strong> cash, check, Venmo, Zelle, or card. The balance
+  updates instantly.</li>
+</ul>
+<p>Invoices are frozen once issued. If you fix a price afterwards, the client's balance
+updates but the document they received never changes out from under them.</p>
+</div>
+<figure><img src="guide/money.png" alt="Money tab"><figcaption>Who owes, how much, and
+for how long.</figcaption></figure>
+</div>
+
+<div class="section">
+<div class="text">
+<h3>What your client receives</h3>
+<p>Set your logo, Venmo line, and mailing address once in <strong>Settings → Business
+profile</strong>, and every invoice tells the client exactly how to pay you.</p>
+</div>
+<figure class="wide"><img src="guide/invoice.png" alt="Invoice PDF"><figcaption>The PDF
+your client gets: your logo, the work by date, and how to pay.</figcaption></figure>
+</div>
+
+<h2 id="profiles">7. Know your clients</h2>
+<div class="section">
+<div class="text">
+<p>Tap any client to see the whole relationship on one screen: balance and status up top,
+Text and Call and Directions one tap away, their property with its schedule and gate
+code, recent money activity, and lifetime numbers at the bottom.</p>
+<ul>
+  <li><strong>See all visits</strong> opens the full service history: every visit, what
+  was done, what it cost, how long it took.</li>
+  <li>The <strong>•••</strong> menu holds contact details, notes, birthdays, status
+  changes (including marking a client lost, with the reason), and extra properties for
+  clients with more than one yard.</li>
+</ul>
+</div>
+<figure><img src="guide/client.png" alt="Client profile"><figcaption>The driveway
+questions, answered: do they owe me, and where am I going.</figcaption></figure>
+</div>
+
+<h2 id="winter">8. Winter and spring</h2>
+<div class="section">
+<div class="text">
+<p>When the season ends, open the Schedule menu and choose <strong>Season pause</strong>.
+Pick the clients (everyone, by default) and their upcoming visits clear from the planner.
+History and balances stay put.</p>
+<p>In spring, the same screen brings everyone back in one tap. The break isn't backfilled
+and every client keeps their place in the rotation, so a biweekly client returns on the
+same alternating weeks they left on.</p>
+</div>
+<figure><img src="guide/pause.png" alt="Season pause"><figcaption>One tap down for
+winter, one tap back for spring.</figcaption></figure>
+</div>
+
+<h2 id="setup">9. Your business, your data</h2>
+<div class="section">
+<div class="text">
+<p><strong>Settings → Business profile</strong> holds your name, phone, logo, sales tax
+rate if you charge it, and the how-to-pay details for invoices.</p>
+<p>Your data lives on your phone and works fully offline. If you're signed into iCloud it
+backs up automatically to your private iCloud, and Settings says plainly whether backup
+is on. <strong>Prepare export</strong> gives you your clients, visits, and money as plain
+CSV files any spreadsheet can open, and the client file imports straight back into a
+fresh install. No accounts, no tracking, no servers.</p>
+</div>
+<figure><img src="guide/profile.png" alt="Business profile"><figcaption>Set once:
+identity, logo, tax, and how clients pay you.</figcaption></figure>
+</div>
+
+<h2 id="help">Questions or problems</h2>
+<p>Email <a href="mailto:jsd137@gmail.com">jsd137@gmail.com</a> with what you were doing
+and what you expected. During testing, blunt reports are the most useful thing you can
+send.</p>
+
+</body>
+</html>
