@@ -48,8 +48,9 @@
 and what you're owed. Everything works with no signal, so a dead spot at the back of a
 neighborhood never stops you. This guide walks the app the way you'd walk a work day.</p>
 
-<p class="tip">Your clients never see or install anything. Texts come from your own phone
-number, and invoices arrive as normal PDFs. To them, it's just you, but organized.</p>
+<p class="tip">Your clients never install anything. Texts come from your own phone number,
+and invoices arrive as normal PDFs. If you switch on card payments, they tap a link and
+pay on Stripe's secure page. To them, it's just you, but organized.</p>
 
 <h2 id="clients">1. Get your clients in</h2>
 <div class="section">
@@ -138,6 +139,15 @@ count and dollar total. Arrows move between weeks.</p>
   rotation, from the menu in the corner.</li>
   <li><strong>Tap a stop</strong> in a day to open that client's profile.</li>
 </ul>
+
+<h3>Weather</h3>
+<p>Each day card carries its forecast, so the week you're looking at is the week the sky
+is planning. When rain is likely on a day that still has stops on it, a card appears at
+the top of the week: "Rain likely Thursday, move its 8 stops to Friday?" One tap does the
+whole move, and it only ever offers a day the forecast says is dry enough to be worth it.
+It's a suggestion. You decide.</p>
+<p>Forecasts come from Apple Weather and need a signal to refresh, so grab the week before
+you drive out of range. Everything else on this screen works offline as always.</p>
 </div>
 <figure><img src="guide/schedule.png" alt="Schedule tab"><figcaption>The week at a
 glance, with today outlined.</figcaption></figure>
@@ -192,7 +202,154 @@ profile</strong>, and every invoice tells the client exactly how to pay you.</p>
 your client gets: your logo, the work by date, and how to pay.</figcaption></figure>
 </div>
 
-<h2 id="profiles">7. Know your clients</h2>
+<div class="section">
+<div class="text">
+<h3>Getting paid by card</h3>
+<p>Card payments are optional and off until you turn them on. In <strong>Settings →
+Getting paid</strong>, tap <strong>Set up card payments</strong> and connect a free Stripe
+account. Stripe walks you through the usual business and bank questions on its own pages.
+It takes about ten minutes and you only do it once.</p>
+<p>After that, any invoice can carry a pay link:</p>
+<ul>
+  <li>Open the invoice and tap <strong>Add card pay link</strong>.</li>
+  <li>Tap <strong>Text invoice with pay link</strong>. The message is written for you with
+  the link in it, and it sends from your number like everything else.</li>
+  <li>Your client taps it and pays by card or Apple Pay. No app, no account, no signup.</li>
+</ul>
+<p>The payment lands back in Hedgemony by itself the next time you open the app. The
+balance drops, the invoice gets a <strong>PAID</strong> badge, and Stripe emails your
+client a receipt. The link is also printed on the invoice PDF for anyone who'd rather
+click there, and it doesn't expire, so a text found two weeks later still works.</p>
+<p>The money goes from your client to <em>your</em> Stripe account and out to your bank.
+Stripe keeps about 3% of each card payment, which is their fee, not ours. Hedgemony takes
+nothing and never holds your money.</p>
+
+<h3>Autopay</h3>
+<p>For clients who'd rather not think about it, open their profile and use
+<strong>Text card setup link</strong> under Autopay. They save a card once on Stripe's
+page, and then you choose how they're billed:</p>
+<ul>
+  <li><strong>After each visit:</strong> the card is charged when you complete the job.</li>
+  <li><strong>Monthly:</strong> their balance is charged at the start of each month.</li>
+  <li><strong>Off:</strong> the card stays on file and nothing is charged.</li>
+</ul>
+<p>These charges do happen on their own, which is the point of autopay, and Stripe sends
+the receipt. If a card is declined, nothing breaks: the balance simply stays owed and
+shows up in your reminders like any other past due client.</p>
+
+<h3>Overdue reminders</h3>
+<p>When someone drifts past due, the Money tab says so: "3 clients need a nudge." Tap it
+and you get them one after another with the message already written, getting a little
+firmer at 7 days, 14 days, and 30 days. Tap through, send from your number, done.</p>
+<p>Hedgemony tracks which reminder each client has had, so nobody gets the same one twice,
+and paying up clears the slate. If they fall behind again months later, the ladder starts
+over at friendly.</p>
+</div>
+</div>
+
+<h2 id="numbers">7. Know your numbers</h2>
+<div class="section">
+<div class="text">
+<p>Money coming in is half the picture. The Money tab holds the other half.</p>
+
+<h3>Expenses</h3>
+<p>Tap <strong>Expenses</strong> under Spending. The fuel pump button in the corner is the
+one you'll use most: it opens with the category already set and the keypad already up, so
+a gas stop takes about ten seconds. Add the odometer and a photo of the receipt if you
+want them; skip them if you don't. The <strong>+</strong> button covers everything else,
+from blades to insurance.</p>
+<p>Expenses group by month with a running total, and they show up in your reports and your
+CSV export, which is the point. Come tax time you're reading a list instead of digging
+through a glovebox.</p>
+
+<h3>The weekly and monthly report</h3>
+<p>Tap the <strong>Report</strong> card for the numbers a business actually runs on:</p>
+<ul>
+  <li>Income, with tips shown separately and a breakdown of how the money arrived: card,
+  cash, check.</li>
+  <li>Properties mowed, and your average per visit.</li>
+  <li>Clients gained and lost.</li>
+  <li>Expenses by category, and your net.</li>
+  <li>How this week or month compares to the one before it.</li>
+  <li>Month, quarter, and year totals underneath, for when you want the longer view.</li>
+</ul>
+<p>Switch between <strong>Week</strong> and <strong>Month</strong>, and use the arrows to
+walk back through past periods. The share button in the corner turns whatever you're
+looking at into a one page PDF: text it to yourself, email it to your accountant, or file
+it. It also lists what your clients still owe you as of today, because a great month with
+a growing pile of unpaid invoices isn't a great month.</p>
+
+<h3>Your time</h3>
+<p>The <strong>Your time</strong> card ranks your clients by what an hour at their yard
+actually pays you, worst first. It builds from the job timer, so the more you use the
+timer the truer it gets. This is the screen that tells you which yard to reprice, and it's
+the number your quote calculator is aiming at.</p>
+</div>
+</div>
+
+<h2 id="quotes">8. Win new work</h2>
+<div class="section">
+<div class="text">
+<p>From the Clients tab, tap the green <strong>+</strong> and choose <strong>Quotes</strong>.
+A new quote is meant to be built at the curb, before you drive away.</p>
+<ul>
+  <li><strong>Measure on map:</strong> the lawn from above, on satellite. Tap the corners
+  and Hedgemony works out the square footage and the edging along the boundary. Undo backs
+  up a corner; Clear starts over. Type the numbers by hand instead if you'd rather.</li>
+  <li><strong>Obstacles:</strong> count the trees, playsets, and bird baths you have to
+  trim around.</li>
+  <li><strong>Add-ons:</strong> tap the extras you're including from your price list.</li>
+  <li><strong>Garden beds:</strong> bed size and mulch depth turn into cubic yards, what
+  the mulch will cost, and the labor to spread it, ready to add as a line.</li>
+</ul>
+<p>Hedgemony turns all that into minutes of work, prices those minutes at your rate, and
+shows a <strong>suggested</strong> price. Your price is a separate line right under it,
+because the suggestion is a starting point and you know the customer. Pick weekly,
+biweekly, or monthly, and you have a quote.</p>
+<p><strong>Text the quote</strong> sends it in plain language from your number. When they
+say yes, tap <strong>They said yes</strong>, pick the first visit date, and the client,
+the property, and the whole recurring schedule are created at the price you quoted.
+Nothing to retype. If they pass, mark it lost and it stays in your records where the
+pipeline can learn from it. Swipe any quote to delete it for good.</p>
+
+<h3>Your rate and your price list</h3>
+<p>Both live in <strong>Settings → Price list</strong>.</p>
+<ul>
+  <li><strong>Target rate per hour</strong> is what you want an hour of your day to earn.
+  Every suggested price is built from it. Compare it against the Your time screen now and
+  then: that one says what you actually earn, and the gap between them is your raise.</li>
+  <li><strong>Job minimum</strong> is the floor. A tiny yard still costs you the drive, so
+  no suggestion ever comes in under this.</li>
+  <li><strong>Add-ons</strong> are the extras you sell, priced once. Weed eating, bush
+  trimming, bed cleanup, whatever you offer. They become one tap chips on every quote.</li>
+</ul>
+</div>
+</div>
+
+<h2 id="leads">9. Leads and flyers</h2>
+<div class="section">
+<div class="text">
+<p>The <strong>Pipeline</strong>, also under the Clients tab <strong>+</strong> menu, is
+where the work you haven't won yet lives.</p>
+<ul>
+  <li><strong>Follow up</strong> lists anyone who's gone quiet: a quote sent five days ago
+  with no answer, a lead nobody has called in a week. Longest silence at the top, message
+  already written. Send it, or mark them contacted if you caught them by phone.</li>
+  <li><strong>Warm leads</strong> is everyone you've marked as a lead, with where they came
+  from and when you last talked. Tap through to their profile like any client.</li>
+</ul>
+
+<h3>The flyer map</h3>
+<p>Flyered a neighborhood on Saturday? Open <strong>Flyer map</strong>, tap
+<strong>Mark an area</strong>, trace the block you covered, and name it. It saves with
+today's date.</p>
+<p>From then on, that area keeps its own score: any lead or client who turns up inside it
+after the day you flyered gets counted, and the list reads "2 leads · 1 client." Do that a
+few times and you stop guessing which streets are worth the walk.</p>
+</div>
+</div>
+
+<h2 id="profiles">10. Know your clients</h2>
 <div class="section">
 <div class="text">
 <p>Tap any client to see the whole relationship on one screen: balance and status up top,
@@ -215,7 +372,7 @@ code, recent money activity, and lifetime numbers at the bottom.</p>
 questions, answered: do they owe me, and where am I going.</figcaption></figure>
 </div>
 
-<h2 id="winter">8. Winter and spring</h2>
+<h2 id="winter">11. Winter and spring</h2>
 <div class="section">
 <div class="text">
 <p>When the season ends, open the Schedule menu and choose <strong>Season pause</strong>.
@@ -229,7 +386,7 @@ same alternating weeks they left on.</p>
 winter, one tap back for spring.</figcaption></figure>
 </div>
 
-<h2 id="setup">9. Your business, your data</h2>
+<h2 id="setup">12. Your business, your data</h2>
 <div class="section">
 <div class="text">
 <p><strong>Settings → Business profile</strong> holds your name, phone, logo, sales tax
@@ -252,9 +409,13 @@ Settings says plainly whether that's on.</p>
   replaces everything currently in the app, so it confirms with you, and it finishes the
   next time you open Hedgemony.</li>
 </ul>
-<p><strong>Prepare export</strong> is the other door out: your clients, visits, and money
-as plain CSV files any spreadsheet can open. The client file imports straight back into a
-fresh install. No accounts, no tracking, no servers.</p>
+<p><strong>Prepare export</strong> is the other door out: your clients, visits, money, and
+expenses as plain CSV files any spreadsheet can open. The client file imports straight back
+into a fresh install. No accounts, no ads, no tracking.</p>
+<p>If you turn on card payments, that part talks to Stripe and to a small service of ours
+that connects your app to Stripe. It holds payment amounts and dates, never card numbers
+and never the rest of your business. The <a href="privacy.html">privacy policy</a> spells
+out exactly what goes where.</p>
 </div>
 <figure><img src="guide/profile.png" alt="Business profile"><figcaption>Set once:
 identity, logo, tax, and how clients pay you.</figcaption></figure>
