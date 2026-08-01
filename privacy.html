@@ -26,11 +26,14 @@
 <nav><a href="index.html">Hedgemony</a> · <a href="support.html">Support</a></nav>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Hedgemony for iOS · Effective July 26, 2026</p>
+<p class="meta">Hedgemony for iOS · Effective August 1, 2026</p>
 
 <p>Hedgemony™ is a lawn care business management app made by Jeffery Daniels.
 The short version: <strong>your data is yours.</strong> Hedgemony has no accounts,
-no analytics, no ads, no tracking, and no servers of ours. We never see your data.</p>
+no analytics, no ads, and no tracking. Your business data lives on your device
+and in your private iCloud, where we cannot read it. The one exception is card
+payments, which you can turn on if you want them; the payments section below
+explains exactly what that involves.</p>
 
 <h2>What Hedgemony stores</h2>
 <p>Everything you put into Hedgemony, from clients and schedules to payments,
@@ -46,9 +49,34 @@ not signed into iCloud, your data stays on your device only.</p>
 
 <h2>What Hedgemony collects about you</h2>
 <p>Nothing. Hedgemony contains no analytics, no advertising, no tracking
-identifiers, and no third-party SDKs. It makes no network connections of its
-own; the only data that leaves your device is the iCloud sync described above,
-which goes only to your private iCloud storage.</p>
+identifiers, and no third-party SDKs. Beyond the iCloud sync described above,
+the app talks to exactly two things: Apple's weather service, and the payment
+service described below if you choose to turn card payments on.</p>
+
+<h2>Weather</h2>
+<p>The schedule screen shows the forecast for your work area. To fetch it,
+Hedgemony sends the coordinates of one of your properties to Apple's WeatherKit
+service. Apple processes weather requests under the
+<a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>; Hedgemony
+sends coordinates only, never names or addresses.</p>
+
+<h2>Card payments, if you turn them on</h2>
+<p>Getting paid by card is optional. If you connect a Stripe account from
+Settings, payments work like this:</p>
+<p><strong>Stripe processes the payments.</strong> Your clients' card details go
+directly to <a href="https://stripe.com/privacy">Stripe</a>, the payment company,
+on Stripe's own pages. Card numbers never pass through Hedgemony, and we never
+see them. Your Stripe account is yours: money goes from your client to your
+Stripe account to your bank.</p>
+<p><strong>A small relay keeps your phone in sync.</strong> Hedgemony runs one
+small internet service whose only job is connecting your app to Stripe. It
+stores the minimum needed to do that: your Stripe account ID, and for each card
+payment the amount, the date, and internal ID numbers that tell your app which
+client and invoice were paid. It holds no names, no addresses, no card details,
+and none of your other business data. Payment records are delivered to your
+phone the next time you open the app.</p>
+<p>If you never connect Stripe, none of this applies and no payment
+infrastructure is ever contacted.</p>
 
 <h2>Permissions Hedgemony asks for</h2>
 <p><strong>Contacts.</strong> Hedgemony reads contacts only when you choose to
