@@ -26,7 +26,7 @@
 <nav><a href="index.html">Hedgemony</a> · <a href="support.html">Support</a></nav>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Hedgemony for iOS · Effective August 1, 2026</p>
+<p class="meta">Hedgemony for iOS · Effective August 2, 2026</p>
 
 <p>Hedgemony™ is a lawn care business management app made by Jeffery Daniels.
 The short version: <strong>your data is yours.</strong> Hedgemony has no accounts,
@@ -48,10 +48,11 @@ you. We cannot read it, and Apple processes it under the
 not signed into iCloud, your data stays on your device only.</p>
 
 <h2>What Hedgemony collects about you</h2>
-<p>Nothing. Hedgemony contains no analytics, no advertising, no tracking
-identifiers, and no third-party SDKs. Beyond the iCloud sync described above,
-the app talks to exactly two things: Apple's weather service, and the payment
-service described below if you choose to turn card payments on.</p>
+<p>Nothing for its own sake. Hedgemony contains no analytics, no advertising, no
+tracking identifiers, and no third-party SDKs. Beyond the iCloud sync described
+above, the app talks to exactly three things, all optional: Apple's weather
+service, the payment service described below if you turn card payments on, and
+the crew service described below if you set up crew logins.</p>
 
 <h2>Weather</h2>
 <p>The schedule screen shows the forecast for your work area. To fetch it,
@@ -80,13 +81,36 @@ phone the next time you open the app.</p>
 <p>If you never connect Stripe, none of this applies and no payment
 infrastructure is ever contacted.</p>
 
+<h2>Crew, if you turn it on</h2>
+<p>Crew is an optional subscription that gives your workers their own sign-in on
+a simple website, so they can see their route, run the job timer, and log
+expenses. Making that work means some data leaves your phone and lives on a
+server. Here is exactly what:</p>
+<p><strong>Crew accounts.</strong> For each crew member you add, the server
+stores the name you entered, the phone number if you save one for invites, and
+a scrambled (hashed) version of their PIN — the actual PIN is never stored and
+cannot be recovered, only reset.</p>
+<p><strong>Day sheets.</strong> Each crew member's route for the day is pushed to
+the server so their site can show it: client names, addresses, and — only if you
+switch those permissions on for that person — phone numbers, gate notes, and
+prices. What you don't allow is never sent for them at all.</p>
+<p><strong>Work activity.</strong> Job start/stop times, completions, skips, and
+expenses your crew logs (amount, category, note, and receipt photo if they
+attach one) pass through the server on their way back to your phone.</p>
+<p>The crew service runs on Cloudflare's infrastructure, processed under the
+<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.
+It exists solely to run your crew's day; nothing in it is sold, shared, or used
+for anything else. If you never set up crew, none of this applies.</p>
+
 <h2>Permissions Hedgemony asks for</h2>
 <p><strong>Contacts.</strong> Hedgemony reads contacts only when you choose to
 import clients, and only the ones you select. They are stored in your own
 database and never uploaded anywhere.</p>
 <p><strong>Photos.</strong> Hedgemony opens the system photo picker only when you
-choose a logo for your invoices, which means it can see only the images you
-explicitly select. The chosen image is stored with your business profile.</p>
+choose a logo for your invoices or attach a receipt to an expense, which means it
+can see only the images you explicitly select.</p>
+<p><strong>Camera.</strong> Used only when you tap "Take photo" on an expense to
+snap a receipt. The photo is stored with that expense and nowhere else.</p>
 
 <h2>Text messages</h2>
 <p>When you send a reminder or a balance notice, Hedgemony pre-fills a message in
@@ -102,7 +126,9 @@ text, email, or AirDrop, is entirely up to you.</p>
 <p>You can export everything as CSV at any time from Settings. Deleting the app
 deletes the on-device database. To remove iCloud copies, delete Hedgemony's data
 from iCloud storage in the iOS Settings app (Settings → your name → iCloud →
-Manage Account Storage).</p>
+Manage Account Storage). If you set up crew, Settings → Crew → "Delete crew
+account" permanently erases everything on the crew server — every login, route,
+and receipt — immediately and irreversibly.</p>
 
 <h2>Children</h2>
 <p>Hedgemony is a business tool and is not directed at children under 13.</p>
