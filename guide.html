@@ -139,6 +139,10 @@ count and dollar total. Arrows move between weeks.</p>
   <li><strong>One-off work:</strong> cleanups, mulch jobs, anything outside the regular
   rotation, from the menu in the corner.</li>
   <li><strong>Tap a stop</strong> in a day to open that client's profile.</li>
+  <li><strong>Running teams?</strong> A filter next to the week header switches between
+  All, Team 1, and each team you've made. Every count, card, and bulk move respects it,
+  each day shows who's riding, and a "No one riding" warning catches unstaffed days.
+  See <a href="#crew">Your crew</a>.</li>
 </ul>
 
 <h3>Weather</h3>
@@ -219,12 +223,15 @@ It takes about ten minutes and you only do it once.</p>
 </ul>
 <p>The payment lands back in Hedgemony by itself the next time you open the app. The
 balance drops, the invoice gets a <strong>PAID</strong> badge, and Stripe emails your
-client a receipt. The link is also printed on the invoice PDF for anyone who'd rather
+client a receipt. Cash and checks settle invoices too: recording a payment that clears
+their balance marks their invoices paid, and every invoice has a <strong>Mark paid</strong>
+button for the odd case — either way the live pay link is withdrawn so nobody can pay
+twice. The link is also printed on the invoice PDF for anyone who'd rather
 click there, and it doesn't expire, so a text found two weeks later still works.</p>
 <p>The money goes from your client to <em>your</em> Stripe account and out to your bank.
-Stripe keeps about 3% of each card payment, and Hedgemony keeps 0.5%. That's the whole
-price: no monthly cost, and cash or check payments you record yourself are always free.
-Hedgemony never holds your money.</p>
+Stripe keeps about 2.9% + 30¢ of each card payment and Hedgemony keeps 0.5% — about
+3.4% + 30¢ all-in. That's the whole price: no monthly cost, and cash or check payments
+you record yourself are always free. Hedgemony never holds your money.</p>
 
 <h3>Autopay</h3>
 <p>For clients who'd rather not think about it, open their profile and use
@@ -232,7 +239,8 @@ Hedgemony never holds your money.</p>
 page, and then you choose how they're billed:</p>
 <ul>
   <li><strong>After each visit:</strong> the card is charged when you complete the job.</li>
-  <li><strong>Monthly:</strong> their balance is charged at the start of each month.</li>
+  <li><strong>Monthly:</strong> their balance is charged the first time you open the app
+  each month.</li>
   <li><strong>Off:</strong> the card stays on file and nothing is charged.</li>
 </ul>
 <p>These charges do happen on their own, which is the point of autopay, and Stripe sends
@@ -258,7 +266,9 @@ over at friendly.</p>
 <p>Tap <strong>Expenses</strong> under Spending. The fuel pump button in the corner is the
 one you'll use most: it opens with the category already set and the keypad already up, so
 a gas stop takes about ten seconds. Add the odometer and a photo of the receipt if you
-want them; skip them if you don't. The <strong>+</strong> button covers everything else,
+want them; skip them if you don't. Tap a saved receipt any time to read it full screen.
+Expenses your crew logs arrive here on their own, photo attached and marked with who
+logged them. The <strong>+</strong> button covers everything else,
 from blades to insurance.</p>
 <p>Expenses group by month with a running total, and they show up in your reports and your
 CSV export, which is the point. Come tax time you're reading a list instead of digging
@@ -275,7 +285,7 @@ every stop accounted for.</figcaption></figure>
 <ul>
   <li>Income, with tips shown separately and a breakdown of how the money arrived: card,
   cash, check.</li>
-  <li>Properties mowed, and your average per visit.</li>
+  <li>Properties mowed, and what you collected per mow.</li>
   <li>Clients gained and lost.</li>
   <li>Expenses by category, and your net.</li>
   <li>How this week or month compares to the one before it.</li>
@@ -423,30 +433,70 @@ winter, one tap back for spring.</figcaption></figure>
 <h2 id="crew">12. Your crew</h2>
 <div class="section">
 <div class="text">
-<p>When it stops being just you, Settings → <strong>Crew</strong> gives each worker
-their own sign-in on a simple website — nothing for them to install, and it works on
-any phone, Android included. Crew is a monthly subscription; solo Hedgemony stays
-free forever.</p>
-<p><strong>Add a crew member</strong> with a name and a PIN, straight from your
-contacts if you like. If there's a phone number, Hedgemony writes the invite text
-for you: the link, your crew code, and their PIN, ready to send. Lost the link?
-Every crew member's page has <strong>Text the invite again</strong>.</p>
-<p><strong>Permissions are yours to set</strong>, per person: job prices, client
-phone numbers, gate notes, the full week ahead, other crews' routes, and whether
-they can log expenses. What you don't allow never even reaches their phone.</p>
-<p><strong>Teams</strong> (Settings → Crew → Teams) are for more than one truck:
-each team owns its own yards and schedule, and you seat people into teams by day
-of the week — including yourself, so a vacation week is just unseating yourself
-and seating your crew. The Schedule tab shows who's riding each day and warns
-you when a day has stops but nobody on them.</p>
-<p><strong>Their day flows back to you.</strong> When crew mark a yard done or
-skipped, run the timer, or log a fuel receipt with a photo, it all lands in your
-app — completions on your schedule (autopay included), expenses in your books
-with the photo attached. The crew site speaks English and Spanish; they can flip
-it themselves.</p>
-<p>Turning someone off signs them out within a minute. And if you ever want out
-entirely, <strong>Delete crew account</strong> erases everything crew-related
-from the server, permanently.</p>
+<p>When it stops being just you, Settings → <strong>Crew</strong> gives each worker their
+own sign-in on a simple website — nothing for them to install, and it works on any phone,
+Android included. Crew is a monthly subscription; solo Hedgemony stays free forever.</p>
+
+<h3>Set up crew and add your first member</h3>
+<ul>
+  <li><strong>Settings → Crew → Set up crew.</strong> One tap creates your crew account
+  and your <strong>crew code</strong> — the short word-and-number code (like ALL8) your
+  whole crew uses to sign in. You do this once.</li>
+  <li><strong>Add crew member.</strong> Pick them from Contacts or type a name, then set
+  a PIN (6+ characters). If there's a phone number, Hedgemony writes the invite text for
+  you — the site link, your crew code, and their PIN, ready to send.</li>
+  <li>They open the link, enter the code, their name, and their PIN, and they're looking
+  at their route. <strong>Lost the link?</strong> Open their name in Settings → Crew and
+  tap <strong>Text the invite again</strong>.</li>
+</ul>
+
+<h3>Permissions</h3>
+<p>Open any crew member's name to choose what they can see and do: job prices, client
+phone numbers, gate notes, the full week ahead, other crews' routes, and whether they can
+log expenses. What you don't allow never even reaches their phone. The same screen resets
+a PIN or turns their sign-in off — both take effect within a minute.</p>
+
+<h3>Teams: running more than one route at once</h3>
+<p>One crew, one truck? Skip this — your whole book is <strong>Team 1</strong> and
+everything works as it always has. The day you're fielding two routes at the same time:</p>
+<ul>
+  <li><strong>Create the team.</strong> Settings → Crew → <strong>Teams</strong> →
+  <strong>Add a team</strong>. Name it whatever reads at a glance — Team 2, North crew.</li>
+  <li><strong>Give it yards.</strong> Open the new team and switch on the yards it owns.
+  A yard brings its whole schedule with it — weekly stays weekly, biweekly keeps its same
+  alternating weeks. Yards you don't move stay on Team 1. (You can also assign a team
+  right when adding a new client, or from any property's page.)</li>
+  <li><strong>Order its route.</strong> On the Schedule tab, set the filter to that team
+  and drag its stops into driving order. Each team remembers its own order, and future
+  weeks come out the same way.</li>
+</ul>
+
+<h3>Who rides, by day</h3>
+<p>Inside each team is a seating chart: a row for <strong>You</strong> and every crew
+member, with the days of the week. Tap the days each person rides with that team. That's
+the whole system — and it's what fills each crew member's day sheet automatically.</p>
+<ul>
+  <li>A person sits in <strong>one team per day</strong>; seating them here pulls them off
+  another team that day. Monday with you, Tuesday running Team 2 alone — just tap it
+  that way.</li>
+  <li><strong>You're a seat like anyone else.</strong> Going on vacation? Untap your days
+  on Team 1 and seat your crew there. The mowing doesn't stop because you're at the
+  lake.</li>
+  <li>The Schedule tab shows who's riding under each day, and warns you with
+  <strong>"No one riding"</strong> when a day has stops but nobody seated — the
+  yards-get-skipped mistake, caught before it happens.</li>
+</ul>
+
+<h3>Running the day</h3>
+<p>The Today tab gets a team switcher next to the date, so you see your own route while
+your crew works theirs. Their day flows back to you as it happens: yards marked done or
+skipped land on your schedule (autopay included), the job timer's minutes count toward
+that client's true hourly rate, and expenses they log — with receipt photos — drop
+straight into your books, marked with who logged them. The crew site speaks English and
+Spanish; they flip it themselves with one tap.</p>
+<p>And if you ever want out entirely, <strong>Delete crew account</strong> erases
+everything crew-related from the server, permanently. Your clients, schedule, and money
+on your phone are untouched.</p>
 </div>
 </div>
 
@@ -469,13 +519,14 @@ Settings says plainly whether that's on.</p>
   folder you can open in the Files app, and they outlive deleting the app.</li>
   <li><strong>Back up now:</strong> saves a snapshot wherever you point it. Worth putting
   one somewhere you could still reach if the phone went in the lake.</li>
-  <li><strong>Restore from backup:</strong> pick a backup file and Hedgemony reads it
-  first, then asks in plain numbers ("Restore 10 clients and 85 visits?"). Restoring
+  <li><strong>Restore from backup:</strong> pick a backup and Hedgemony reads it
+  first, then asks in plain numbers ("Restore 10 clients and 85 visits?"). Backups carry
+  everything, receipt photos included. Restoring
   replaces everything currently in the app, so it confirms with you, and it finishes the
   next time you open Hedgemony.</li>
 </ul>
-<p><strong>Prepare export</strong> is the other door out: your clients, visits, money, and
-expenses as plain CSV files any spreadsheet can open. The client file imports straight back
+<p><strong>Export everything</strong> is the other door out: one tap builds fresh CSVs of
+your clients, visits, money, and expenses that any spreadsheet can open. The client file imports straight back
 into a fresh install. No accounts, no ads, no tracking.</p>
 <p>If you turn on card payments, that part talks to Stripe and to a small service of ours
 that connects your app to Stripe. It holds payment amounts and dates, never card numbers
