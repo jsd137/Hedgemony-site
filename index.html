@@ -15,7 +15,11 @@
     body { color: #e6e6e6; background: #121212; }
     a { color: #7cc48a; }
   }
-  h1 { font-size: 2em; margin-bottom: 0.2em; }
+  h1 { font-size: 2em; margin-bottom: 0.2em; display: flex; align-items: center; gap: 0.4em; }
+  /* The app icon, at the cap height of the wordmark beside it. border-radius
+     mimics the iOS squircle, which the source PNG does not carry — iOS applies
+     that mask itself. */
+  h1 img { height: 1.05em; width: auto; border-radius: 22%; }
   .tagline { color: #666; font-size: 1.1em; }
   @media (prefers-color-scheme: dark) { .tagline { color: #aaa; } }
   a { color: #2e7d32; }
@@ -24,7 +28,7 @@
 </style>
 </head>
 <body>
-<h1>🌿 Hedgemony™</h1>
+<h1><img src="icon.png" alt="" width="180" height="180">Hedgemony™</h1>
 <p class="tagline">The lawn care business app. Your schedule, your clients, and
 what you're owed, all in one place. Your book works with no signal.</p>
 
