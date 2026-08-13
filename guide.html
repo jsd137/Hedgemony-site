@@ -185,13 +185,16 @@ gives you three moves:</p>
 <ul>
   <li><strong>Text reminder:</strong> a friendly balance text, written for you, sent by
   you.</li>
-  <li><strong>Invoice:</strong> pick which visits go on it, and the app makes a clean PDF
-  with your logo. Send it by text, email, or AirDrop.</li>
+  <li><strong>Invoice:</strong> pick which visits go on it, then send it as a text message
+  or as a PDF with your logo.</li>
   <li><strong>Record payment:</strong> cash, check, Venmo, Zelle, or card. The balance
   updates instantly.</li>
 </ul>
 <p>Invoices are frozen once issued. If you fix a price afterwards, the client's balance
 updates but the document they received never changes out from under them.</p>
+<p>If every visit is already on an invoice, the invoice screen says so and lists what is
+still unpaid, so you can see what you are waiting on without hunting through old
+invoices.</p>
 </div>
 <figure><img src="guide/money.png" alt="Money tab"><figcaption>Who owes and for how long,
 then what you've spent and who needs a nudge.</figcaption></figure>
@@ -199,9 +202,20 @@ then what you've spent and who needs a nudge.</figcaption></figure>
 
 <div class="section">
 <div class="text">
+<h3>Send it as a text</h3>
+<p>Most of this work is settled by text, so an invoice can go that way too. Tap
+<strong>As a text</strong> and Hedgemony writes the message: the work by date, the total,
+and every way you take money. It opens in Messages with your client's number already
+filled in, and you tap send. It arrives from your own number like everything else.</p>
+<p>The wording is yours. Settings → <strong>Message templates</strong> holds the invoice
+text alongside your reminders, so you can say it the way you say it. Anything you do not
+use, like a card link you have not set up, drops out of the message instead of leaving a
+gap.</p>
+
 <h3>What your client receives</h3>
 <p>Set your logo, Venmo line, and mailing address once in <strong>Settings → Business
-profile</strong>, and every invoice tells the client exactly how to pay you.</p>
+profile</strong>, and every invoice tells the client exactly how to pay you. Tap
+<strong>As a PDF</strong> when you want the printed page instead of the message.</p>
 </div>
 <figure class="wide"><img src="guide/invoice.png" alt="Invoice PDF"><figcaption>The PDF
 your client gets: your logo, the work by date, and how to pay.</figcaption></figure>
@@ -214,11 +228,11 @@ your client gets: your logo, the work by date, and how to pay.</figcaption></fig
 Getting paid</strong>, tap <strong>Set up card payments</strong> and connect a free Stripe
 account. Stripe walks you through the usual business and bank questions on its own pages.
 It takes about ten minutes and you only do it once.</p>
-<p>After that, any invoice can carry a pay link:</p>
+<p>After that, every invoice carries a pay link by itself. There is no button to press:</p>
 <ul>
-  <li>Open the invoice and tap <strong>Add card pay link</strong>.</li>
-  <li>Tap <strong>Text invoice with pay link</strong>. The message is written for you with
-  the link in it, and it sends from your number like everything else.</li>
+  <li>Make the invoice. The link is minted with it.</li>
+  <li>Send it <strong>As a text</strong> or <strong>As a PDF</strong>. The link is in
+  both.</li>
   <li>Your client taps it and pays by card or Apple Pay. No app, no account, no signup.</li>
 </ul>
 <p>The payment lands back in Hedgemony by itself the next time you open the app. The
@@ -246,6 +260,23 @@ page, and then you choose how they're billed:</p>
 <p>These charges do happen on their own, which is the point of autopay, and Stripe sends
 the receipt. If a card is declined, nothing breaks: the balance simply stays owed and
 shows up in your reminders like any other past due client.</p>
+
+<h3>Fixing a mistake</h3>
+<p>You will fat-finger a payment eventually. Two ways out, and neither of them asks you to
+type a minus sign.</p>
+<ul>
+  <li><strong>An invoice that should not have gone out.</strong> Open it and tap
+  <strong>Void this invoice</strong>. The visits on it go back to being uninvoiced, so you
+  can bill them again on the right invoice. The confirmation tells you what it does to the
+  client's balance before you commit.</li>
+  <li><strong>A payment typed wrong, or a credit you owe someone.</strong> Open the client
+  and tap <strong>Adjust balance</strong>. Enter the amount, say whether they owe
+  <strong>more</strong> or <strong>less</strong>, and write down why. The reason shows up
+  on their money list, so next season you can still tell what happened.</li>
+</ul>
+<p>A hand-entered payment can also be deleted outright from the client's money list.
+Charges from completed jobs and card payments from Stripe stay put: those belong to a
+visit and to Stripe, and deleting one would only bring it back on the next sync.</p>
 
 <h3>Overdue reminders</h3>
 <p>When someone drifts past due, the Money tab says so: "3 clients need a nudge." Tap it
@@ -503,19 +534,21 @@ everything works as it always has. The day you're fielding two routes at the sam
 <ul>
   <li><strong>Create the team.</strong> Settings → Crew → <strong>Teams</strong> →
   <strong>Add a team</strong>. Name it whatever reads at a glance — Team 2, North crew.</li>
-  <li><strong>Give it yards.</strong> Open the new team and switch on the yards it owns.
-  A yard brings its whole schedule with it — weekly stays weekly, biweekly keeps its same
-  alternating weeks. Yards you don't move stay on Team 1. (You can also assign a team
-  right when adding a new client, or from any property's page.)</li>
+  <li><strong>Give it yards.</strong> Which team a yard is on is set on the yard: open the
+  property and pick its team, or choose one right when you add a new client. A yard brings
+  its whole schedule with it — weekly stays weekly, biweekly keeps its same alternating
+  weeks. Yards you don't move stay on Team 1.</li>
   <li><strong>Order its route.</strong> On the Schedule tab, set the filter to that team
   and drag its stops into driving order. Each team remembers its own order, and future
   weeks come out the same way.</li>
 </ul>
 
 <h3>Who rides, by day</h3>
-<p>Inside each team is a seating chart: a row for <strong>You</strong> and every crew
-member, with the days of the week. Tap the days each person rides with that team. That's
-the whole system — and it's what fills each crew member's day sheet automatically.</p>
+<p>Seating lives on the <strong>Schedule</strong> tab, beside the week it plans. Tap the
+team button above the week and choose <strong>Who rides</strong>. You get a row for
+<strong>You</strong> and every crew member, with the days of the week. Tap the days each
+person rides with that team. That's the whole system, and it's what fills each crew
+member's day sheet automatically.</p>
 <ul>
   <li>A person sits in <strong>one team per day</strong>; seating them here pulls them off
   another team that day. Monday with you, Tuesday running Team 2 alone — just tap it
@@ -523,10 +556,13 @@ the whole system — and it's what fills each crew member's day sheet automatica
   <li><strong>You're a seat like anyone else.</strong> Going on vacation? Untap your days
   on Team 1 and seat your crew there. The mowing doesn't stop because you're at the
   lake.</li>
-  <li>The Schedule tab shows who's riding under each day, and warns you with
+  <li>Each day on the week shows who's riding under it, and warns you with
   <strong>"No one riding"</strong> when a day has stops but nobody seated — the
   yards-get-skipped mistake, caught before it happens.</li>
 </ul>
+<p>The roster, PINs and permissions stay in Settings, because those change once and then
+sit still. Seating changes with the week, so it belongs with the week. Which team a yard
+is on is set on the yard itself.</p>
 
 <h3>Running the day</h3>
 <p>The Today tab gets a team switcher next to the date, so you see your own route while
